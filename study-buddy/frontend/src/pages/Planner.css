@@ -1,0 +1,291 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.planner-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 2rem;
+  padding-top: 140px; /* Account for fixed navbar */
+}
+
+.planner-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.planner-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.planner-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: 'Germania One', cursive; /* Keep special font for bold title */
+}
+
+.planner-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.add-topic-btn {
+  padding: 1rem 2rem;
+  background: white;
+  color: #6a11cb;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.add-topic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.add-topic-modal {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.add-topic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-topic-form h3 {
+  color: #6a11cb;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.add-topic-form input,
+.add-topic-form textarea,
+.add-topic-form select {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.add-topic-form input:focus,
+.add-topic-form textarea:focus,
+.add-topic-form select:focus {
+  outline: none;
+  border-color: #6a11cb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: #6a11cb;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #5a0fb8;
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.schedule-section {
+  margin-bottom: 3rem;
+}
+
+.schedule-section h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Germania One', cursive;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.schedule-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+}
+
+.priority-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.schedule-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.schedule-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.schedule-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.difficulty-badge,
+.time-badge {
+  padding: 0.4rem 0.8rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.schedule-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.schedule-date {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.complete-btn {
+  padding: 0.5rem 1rem;
+  background: #6bcf7f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+  background: #5ab86d;
+}
+
+.completed-badge {
+  padding: 0.5rem 1rem;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  color: #6a11cb;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
